@@ -66,6 +66,7 @@ const TodoList = () => {
           placeholder="Enter a task..." 
           value={task}
           onChange={(e) => setTask(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && addTodo()}
         />
         <button onClick={addTodo}>+ Add Task</button>
       </div>
