@@ -47,7 +47,17 @@ const TodoList = () => {
   const deleteTodo = (index: number) => {
     setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
   };
-
+  
+  const editTodo = (index: number, newTitle: string) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo, i) =>
+        i === index
+          ? { ...todo, title: newTitle, date: new Date().toLocaleString() }
+          : todo
+      )
+    );
+  };
+  
   return (
     <div className="container">
       <div className="input-section">
@@ -66,6 +76,7 @@ const TodoList = () => {
             todo={todo} 
             onToggleComplete={() => toggleComplete(index)} 
             onDelete={() => deleteTodo(index)} 
+            onEdit={(newTitle) => editTodo(index, newTitle)}
           />
         ))}
       </div>
