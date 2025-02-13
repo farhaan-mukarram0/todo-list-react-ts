@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import TodoItem from "./TodoItem";
+import { useRef } from "react";
 
 interface Todo {
   title: string;
@@ -17,6 +18,11 @@ const getInitialTodos = (): Todo[] => {
 const TodoList = () => {
   const [todos, setTodos] = useState<Todo[]>(getInitialTodos); //Load initial Todos from local storage
   const [task, setTask] = useState<string>("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
 
   //Sync local storage when todos change
   useEffect(() => {
@@ -62,6 +68,7 @@ const TodoList = () => {
     <div className="container">
       <div className="input-section">
         <input 
+          ref={inputRef}
           type="text" 
           placeholder="Enter a task..." 
           value={task}
