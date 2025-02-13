@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #3f51b5;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header-content h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 700px;
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-section {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-section button {
+    padding: 10px;
+    background-color: white;
+    color: #3f51b5;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.input-section button:hover {
+    border-color: grey;
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #3f51b5;
+    background-color: #ffffff;
+}
+
+.todo-item.complete {
+    background-color: #d3d3d3;
+}
+
+.todo-item .todo-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.todo-item .todo-footer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.todo-item .timestamp {
+    font-size: 12px;
+    color: gray;
+    justify-content: flex-end;
+}
+
+.todo-item .todoTitle {
+    font-size: 12px;
+    color: gray;
+    justify-content: flex-start;
+}
+
+.todo-item button {
+    margin-left: 2px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    background-color: white;
+    color: #3f51b5
+}
